@@ -1,5 +1,5 @@
-.body {
-    background-color: #eee;
+body {
+   background-color: #81a473;
 }
 
 a {
@@ -28,4 +28,42 @@ a {
     
 a:active {
     color: black;
+ }
+
+ul {
+   list-style: none;
+   background-color: #eee;
+   border: solid 1px #ddd;
+   border-radius: 4px;
+   padding-left: 0px;
+ }
+
+li {
+   border-bottom: solid 1px #ddd;
+   padding: 15px;
+ }
+
+ table {
+   width: 100%;
+   background-color: white;
+   border-collapse: collapse;
+ }
+
+ tr:nth-child(even) {
+   background-color: #f2f2f2;
+ }
+
+ td {
+   border: 1px solid #ddd;
+   padding: 8px;
+ }
+
+ table th {
+   background-color: #adc965;
+   color: white;
+   text-align: left;
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-top: 12px;
+   padding-bottom: 12px;
  }
