@@ -10,6 +10,10 @@ app.put('/:id', user.update)
 app.patch('/:id', user.update)
 app.delete('/:id', user.destroy)
 
+app.get('*', (res, req) => {
+    res.statusCode(404).send('no existe')
+}) 
+
 app.listen(port, () => {
     console.log("Arrancando la aplicacion")
 })

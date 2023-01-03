@@ -3,7 +3,7 @@ const User = {
         res.status(200).send('Este es un chancho')
     },
     list: (req, res) => {
-        res.status (200).send('Hola') 
+        res.status(200).send('Hola') 
     },
     create: (req, res) => {
         res.status(201).send('Creando')
