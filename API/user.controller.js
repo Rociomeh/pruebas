@@ -1,8 +1,11 @@
+const { default: mongoose } = require('mongoose')
 const Users = require('./User')
 
 const User = {
     get: async (req, res) => {
-        res.status(200).send('Este es un chancho')
+        const { id } = req.params
+        const user = await Users.findOne({ _id: id})
+        res.status(200).send(user)
     },
     list: async (req, res) => {
         const users = await Users.find()
@@ -10,7 +13,9 @@ const User = {
     },
     create: async (req, res) => {
         console.log(req, body)
-        res.status(201).send('Creando')
+        const user = new Users(req.body)
+        const savedUser = await user.save()
+        res.status(201).send(savedUser._id)
     },
     update: async (req, res) => {
         res.status(204).send('Actualizando')
