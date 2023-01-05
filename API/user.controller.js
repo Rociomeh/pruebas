@@ -12,7 +12,7 @@ const User = {
         res.status(200).send(users) 
     },
     create: async (req, res) => {
-        console.log(req, body)
+        console.log(req.body)
         const user = new Users(req.body)
         const savedUser = await user.save()
         res.status(201).send(savedUser._id)
